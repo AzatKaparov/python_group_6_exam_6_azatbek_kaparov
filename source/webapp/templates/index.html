@@ -5,17 +5,22 @@
 {% block content %}
     <h1 id="main-center">Гостевая книга</h1>
     <p id="main-center"><a href="#">Добавить запись</a></p>
+    <div class="row">
         {% for guest in guests %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                  <h5 class="card-title">{{ guest.name }} <a href="#" class="card-icons"><i class="fas fa-trash"></i></a>
-                  <a href="#" class="card-icons"><i class="fas fa-pen-alt"></i></a></h5>
-                  <h6 class="status-active">{% if guest.status == 'active' %}{{ guest.get_status_display }}{% endif %}</h6>
+                  <h5 class="card-title">{{ guest.name }}
+                  <a href="#" class="card-icons"><i class="fas fa-trash"></i></a>
+                  <a href="{% url 'update' guest.pk %}" class="card-icons"><i class="fas fa-pen-alt"></i></a></h5>
+                  <h6 class="status-active">{{ guest.get_status_display }}</h6>
                   <i><h6 class="card-email">{{ guest.email }}</h6></i>
                 <p class="card-text">{{ guest.text }}</p>
               <p class="date">Время создания:<br/>{{ guest.created_date }}</p>
               <p class="date">Время редактирования:<br/>{{ guest.redacted_date }}</p>
               </div>
             </div>
+        </div>
         {% endfor %}
+    </div>
 {% endblock %}

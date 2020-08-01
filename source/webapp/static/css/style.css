@@ -53,3 +53,7 @@ a:hover{
 #main-center{
     text-align: center;
 }
+
+.card {
+    margin-bottom: 10%;
+}

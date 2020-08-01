@@ -3,8 +3,6 @@ from webapp.models import Guestbook
 from django.http import HttpResponseNotFound, HttpResponseNotAllowed
 from .forms import CreateForm
 
-# В index добавлен фильтр
-
 
 def index_view(request):
     all = Guestbook.objects.all().order_by('-created_date')
@@ -28,7 +26,7 @@ def create_view(request, *args, **kwargs):
     elif request.method == 'POST':
         form = CreateForm(data=request.POST)
         if form.is_valid():
-            task = Guestbook.objects.create(
+            guest = Guestbook.objects.create(
                 name=form.cleaned_data['name'],
                 email=form.cleaned_data['email'],
                 text=form.cleaned_data['text'],
@@ -39,3 +37,44 @@ def create_view(request, *args, **kwargs):
             })
 
         return redirect('index')
+
+
+def update_view(request, pk):
+    guest = get_object_or_404(Guestbook, pk=pk)
+    if request.method == "GET":
+        form = CreateForm(initial={
+            'name': guest.name,
+            'email': guest.email,
+            'text': guest.text,
+        })
+        return render(request, 'update.html', context={
+            'form': form,
+            'guest': guest
+        })
+    elif request.method == 'POST':
+        form = CreateForm(data=request.POST)
+        if form.is_valid():
+            guest.name = form.cleaned_data['name']
+            guest.email = form.cleaned_data['email']
+            guest.text = form.cleaned_data['text']
+            guest.save()
+            return redirect('index')
+        else:
+            return render(request, 'update.html', context={
+                'guest': guest,
+                'form': form,
+                'errors': form.errors
+            })
+    else:
+        return HttpResponseNotAllowed(permitted_methods=['GET', 'POST'])
+
+
+def delete_view(request, pk):
+    task = get_object_or_404(Guestbook, pk=pk)
+    if request.method == 'GET':
+        return render(request, 'delete.html', context={'task': task})
+    elif request.method == 'POST':
+        task.delete()
+        return redirect('index')
+    else:
+        return HttpResponseNotAllowed(permitted_methods=['GET', 'POST'])
