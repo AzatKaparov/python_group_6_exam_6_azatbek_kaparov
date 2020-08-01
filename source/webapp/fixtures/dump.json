@@ -1,0 +1,80 @@
+[
+{
+  "model": "webapp.guestbook",
+  "pk": 1,
+  "fields": {
+    "name": "\u0410\u0437\u0430\u0442",
+    "email": "azatkaparov843@gmail.com",
+    "text": "\u0411\u0430\u044b\u0432\u0448\u0430\u043e\u044b\u0432\u0448\u0444\u0436\u0449\u043c\u043e\u0444\u044b\u0449\u0432\u043c\u043e\r\n\u044b\u0432\u0434\u0430\u043b\u0444\u044b\u043e\u043f\u0434\u043b\u0444\u044b\u0430\u0432",
+    "created_date": "2020-08-01T05:51:27.989Z",
+    "redacted_date": "2020-08-01T05:51:27.989Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 2,
+  "fields": {
+    "name": "\u0411\u0430\u043a\u0443\u043b\u044f",
+    "email": "bakulya@mail.ru",
+    "text": "asfagsfgsdfg",
+    "created_date": "2020-08-01T05:51:50.094Z",
+    "redacted_date": "2020-08-01T05:51:50.095Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 3,
+  "fields": {
+    "name": "\u0416\u0430\u0441\u043c\u0438\u043d",
+    "email": "jady_17@gmail.com",
+    "text": "dsbera;bns;ernjb\r\ndfkjbndsf;lkd",
+    "created_date": "2020-08-01T05:52:11.200Z",
+    "redacted_date": "2020-08-01T05:52:11.200Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 4,
+  "fields": {
+    "name": "\u0418\u0433\u043e\u0440\u044c",
+    "email": "belyi_igor@gmail.com",
+    "text": "agajnsrijlgbn\r\nndfjkbdnjnsdf",
+    "created_date": "2020-08-01T05:52:39.039Z",
+    "redacted_date": "2020-08-01T05:52:39.039Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 5,
+  "fields": {
+    "name": "\u0410\u0434\u0438\u043b\u0435\u0442",
+    "email": "adik1734@mail.com",
+    "text": "rkjgerjlsgnjsl'df'\r\ndfjsb'dfhjkfdsjg,h\r\nasfmlkgjfdgsfd",
+    "created_date": "2020-08-01T05:53:05.943Z",
+    "redacted_date": "2020-08-01T05:54:10.420Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$ZySEX8WjBBRe$IZB836CeWoEod1AfhHEfovmd4tNBAFAkuj2oz7xY+YU=",
+    "last_login": "2020-08-01T05:43:48.980Z",
+    "is_superuser": true,
+    "username": "Admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-08-01T05:42:08.480Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
