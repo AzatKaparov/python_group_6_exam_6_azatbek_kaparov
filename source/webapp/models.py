@@ -14,7 +14,7 @@ class Guestbook(models.Model):
     text = models.TextField(max_length=3000, null=False, blank=False, verbose_name='Текст записи')
     created_date = models.DateTimeField(auto_now_add=True, verbose_name='Время создания записи')
     redacted_date = models.DateTimeField(auto_now=True, verbose_name='Время последнего редактирования')
-    status = models.CharField(max_length=30, choices=STATUS_CHOICE, verbose_name='Статус')
+    status = models.CharField(max_length=30, choices=STATUS_CHOICE, default=DEFAULT_STATUS, verbose_name='Статус')
 
     def __str__(self):
         return f'{self.pk}: {self.name} - {self.status}'

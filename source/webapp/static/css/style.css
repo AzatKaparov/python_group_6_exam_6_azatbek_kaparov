@@ -1,3 +1,12 @@
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: orange;
+    text-decoration: none;
+}
+
 .status-active {
     background-color: lawngreen;
     color: white;
@@ -15,4 +24,32 @@
 
 .card-email {
 
+}
+
+#create-h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#create-submit {
+    font-size: 18px;
+}
+
+.container {
+    margin-bottom: 50px;
+}
+
+.create-container {
+    text-align: center;
+}
+
+#cancel{
+    color: white;
+}
+#cancel:hover{
+    color: white;
+}
+
+#main-center{
+    text-align: center;
 }
