@@ -1,0 +1,18 @@
+.status-active {
+    background-color: lawngreen;
+    color: white;
+    display: inline-block;
+    padding: 3px;
+}
+
+.date {
+    font-size: 14px;
+}
+
+.card-icons {
+    font-size: 15px;
+}
+
+.card-email {
+
+}

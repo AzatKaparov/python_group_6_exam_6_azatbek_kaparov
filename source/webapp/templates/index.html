@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Main{% endblock %}
+
+{% block content %}
+    <h1>Гостевая книга</h1>
+    <p><a href="#">Добавить запись</a></p>
+        {% for guest in guests %}
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                  <h5 class="card-title">{{ guest.name }} <a href="#" class="card-icons"><i class="fas fa-trash"></i></a>
+                  <a href="#" class="card-icons"><i class="fas fa-pen-alt"></i></a></h5>
+                  <h6 class="status-active">{% if guest.status == 'active' %}{{ guest.get_status_display }}{% endif %}</h6>
+                  <i><h6 class="card-email">{{ guest.email }}</h6></i>
+                <p class="card-text">{{ guest.text }}</p>
+              <p class="date">Время создания:<br/>{{ guest.created_date }}</p>
+              <p class="date">Время редактирования:<br/>{{ guest.redacted_date }}</p>
+              </div>
+            </div>
+        {% endfor %}
+{% endblock %}
