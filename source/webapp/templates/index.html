@@ -11,7 +11,7 @@
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                   <h5 class="card-title">{{ guest.name }}
-                  <a href="#" class="card-icons"><i class="fas fa-trash"></i></a>
+                  <a href="{% url 'delete' guest.pk%}" class="card-icons"><i class="fas fa-trash"></i></a>
                   <a href="{% url 'update' guest.pk %}" class="card-icons"><i class="fas fa-pen-alt"></i></a></h5>
                   <h6 class="status-active">{{ guest.get_status_display }}</h6>
                   <i><h6 class="card-email">{{ guest.email }}</h6></i>

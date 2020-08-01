@@ -70,11 +70,11 @@ def update_view(request, pk):
 
 
 def delete_view(request, pk):
-    task = get_object_or_404(Guestbook, pk=pk)
+    guest = get_object_or_404(Guestbook, pk=pk)
     if request.method == 'GET':
-        return render(request, 'delete.html', context={'task': task})
+        return render(request, 'delete.html', context={'guest': guest})
     elif request.method == 'POST':
-        task.delete()
+        guest.delete()
         return redirect('index')
     else:
         return HttpResponseNotAllowed(permitted_methods=['GET', 'POST'])

@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Delete{% endblock %}
+
+{% block menu %}
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'index' %}">Отмена</a>
+    </li>
+{% endblock %}
+
+{% block content %}
+    <h1 id="delete-h1">Вы уверены, что хотите удалить запись?</h1>
+    <div id="delete-form" class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ guest.name }}</h5>
+              <h6 class="status-active">{{ guest.get_status_display }}</h6>
+              <i><h6 class="card-email">{{ guest.email }}</h6></i>
+            <p class="card-text">{{ guest.text }}</p>
+          <p class="date">Время создания:<br/>{{ guest.created_date }}</p>
+          <p class="date">Время редактирования:<br/>{{ guest.redacted_date }}</p>
+        </div>
+        </div>
+    <form action="{% url "delete" guest.pk %}" method="post">
+        {% csrf_token %}
+        <p><input id="delete-button" type="submit" value="Да" id="submit"></p>
+        <p><a id="delete-button-2" href="{% url 'index' %}">Нет</a></p>
+    </form>
+{% endblock %}

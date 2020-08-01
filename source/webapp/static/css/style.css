@@ -57,3 +57,58 @@ a:hover{
 .card {
     margin-bottom: 10%;
 }
+
+#delete-h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#delete-form{
+    float: left;
+    margin-right: 40px;
+}
+
+#delete-button {
+    background-color: dodgerblue;
+    display: inline-block;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 34px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#delete-button:hover {
+    background-color: royalblue;
+    display: inline-block;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 34px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#delete-button-2 {
+    background-color: #e34;
+    display: inline-block;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 34px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#delete-button-2:hover {
+    background-color: crimson;
+    display: inline-block;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 34px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
