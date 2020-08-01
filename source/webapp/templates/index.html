@@ -21,5 +21,17 @@
             </div>
         </div>
         {% endfor %}
+        {#Бонус#}
+        <div class="down-form">
+        <h6>Создайте запись прямо сейчас!</h6>
+        <form action="{% url 'create' %}" method="POST">
+            {% csrf_token %}
+            {% include 'partial/form_field.html' with field=form.name %}
+            {% include 'partial/form_field.html' with field=form.email %}
+            {% include 'partial/form_field.html' with field=form.text %}
+            <br/>
+            <button id="create-submit" class="btn btn-primary my-2 my-sm-0" type="submit">Создать!</button>
+        </form>
+    </div>
     </div>
 {% endblock %}

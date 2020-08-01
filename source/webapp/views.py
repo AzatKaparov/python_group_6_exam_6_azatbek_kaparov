@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from webapp.models import Guestbook
-from django.http import HttpResponseNotFound, HttpResponseNotAllowed
+from django.http import HttpResponseNotAllowed
 from .forms import CreateForm
 
 
@@ -12,8 +12,10 @@ def index_view(request):
             data.append(i)
         else:
             pass
+    form = CreateForm()
     return render(request, 'index.html', context={
-        'guests': data
+        'guests': data,
+        'form': form
     })
 
 

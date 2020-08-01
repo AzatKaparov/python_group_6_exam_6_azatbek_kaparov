@@ -13,5 +13,6 @@
     <h1 id="create-h1">Обновить задачу</h1>
     {% url "update" pk=guest.pk as action_url %}
     {% include 'partial/form.html' with action_url=action_url form_method='post' button_text='Обновить' %}
+    <a href="{% url 'index' %}" id="delete-button-2">Отменить</a>
     </div>
 {% endblock %}

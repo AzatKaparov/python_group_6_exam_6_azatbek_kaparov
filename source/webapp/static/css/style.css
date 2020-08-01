@@ -131,3 +131,20 @@ a:hover{
 .main-icon{
     font-size: 54px;
 }
+
+.down-form{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 12px;
+    border: solid 2px dodgerblue;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 18px;
+}

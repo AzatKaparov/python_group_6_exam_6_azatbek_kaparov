@@ -8,3 +8,4 @@ class CreateForm(forms.Form):
     email = forms.EmailField(required=True, label='Email')
     text = forms.CharField(max_length=3000, required=False, label='Текст',
                            widget=forms.Textarea)
+
